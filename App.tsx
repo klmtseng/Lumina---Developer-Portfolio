@@ -2,7 +2,7 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Home, Code, Cpu, Github, ExternalLink, Sparkles, ChevronRight, Layers, Globe, Zap, Terminal } from 'lucide-react';
-import { Project, SkillCategory } from './types';
+import { Project, SkillCategory } from './types.ts';
 
 const PROJECTS: Project[] = [
   {
@@ -49,7 +49,6 @@ const SKILLS: SkillCategory[] = [
   }
 ];
 
-// Helper: Navbar Component
 const Navbar = () => {
   const { pathname } = useLocation();
   const isActive = (path: string) => (pathname === path || (path === '/' && pathname === '')) ? 'text-blue-400' : 'text-gray-400 hover:text-white';
@@ -91,7 +90,6 @@ const Navbar = () => {
   );
 };
 
-// Pages
 const HomeHero = () => (
   <section className="min-h-screen pt-32 pb-20 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-500/10 blur-[120px] rounded-full -z-10" />

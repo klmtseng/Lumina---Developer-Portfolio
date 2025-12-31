@@ -1,34 +1,21 @@
 # Lumina - Modern Developer Portfolio
 
-Lumina is a high-performance, aesthetically driven developer portfolio template built for the modern web. 
+Lumina is a high-performance, aesthetically driven developer portfolio template.
 
-## 🚀 Important: GitHub Pages Deployment
-GitHub Pages is a static file host. Because this project uses **React** and **TypeScript (.tsx)**, it cannot be run by simply uploading the files. You have two main options:
+## 🚀 Deployment (Zero Config)
+This version is optimized for instant deployment.
 
-### Option A: Automatic Deployment (Recommended)
-1. Push your code to a new GitHub repository.
-2. Go to **Settings > Pages**.
-3. Under **Build and deployment > Source**, select **GitHub Actions**.
-4. GitHub will suggest a "Static HTML" or "Vite" workflow. Use a standard Vite workflow to build and deploy your React app automatically.
+1.  Upload `index.html` and `metadata.json` to your GitHub repository.
+2.  Go to **Settings > Pages**.
+3.  Set the source to the `main` branch (root).
+4.  Your site is live!
 
-### Option B: Local Build
-1. Use a tool like **Vite** (`npm run build`) to generate a `dist` folder.
-2. Upload only the contents of the `dist` folder to your GitHub repository's `gh-pages` branch.
+**Note**: All logic is contained within `index.html` using Babel Standalone. This allows the site to run without a build step (npm build) while still using React and TypeScript syntax.
 
 ## 🛠 Tech Stack
-- **Frontend**: React 19 + TypeScript
-- **Styling**: Tailwind CSS (JIT mode)
-- **Icons**: Lucide React
-- **Routing**: React Router (HashRouter) - *Crucial for GitHub Pages compatibility.*
-
-## 📂 Project Structure
-- `App.tsx`: Main application shell and routing logic.
-- `index.html`: The entry point that boots the React app.
-- `types.ts`: Centralized TypeScript interfaces.
-
-## 🔮 Future Roadmap
-- **Agentic Integration**: Re-introducing Gemini-powered assistants.
-- **Live GitHub Telemetry**: Fetch live repo stats via the GitHub API.
-- **Immersive 3D Visuals**: Interactive background with `react-three-fiber`.
+-   **Frontend**: React 18 (via CDN)
+-   **Styling**: Tailwind CSS (via CDN)
+-   **Icons**: Lucide React
+-   **Routing**: React Router (HashRouter)
 
 Built with ❤️ for the developer community.
